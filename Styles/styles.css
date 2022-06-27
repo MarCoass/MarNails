@@ -1,0 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/genty-demo");
+
+/*:root{
+  --azul: #1b4793;
+  --azulOscuro: #15006d;
+  --barra: #2178ae;
+  --barraClaro: #92c2de;
+  --blanco: #f5f0f6;
+  --coral: #f15a42;
+  --coralOscuro: #ef3c23;
+  --rosa: #ed8e82;
+  --rosaClaro: #f7b0be;
+  --amarillo: #fac92c;
+}*/
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: 0;
+  list-style: none;
+  box-sizing: border-box;
+  /*investigar CUSTOM PROPETIES*/
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--blanco);
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  --textoResaltado: #ef3c23;
+  --barra: #5d9cec;
+  --boton: #f35868;
+  --amarillo: #ffce54;
+  --sombraBoton: black;
+  --texto: black;
+  --logo: #f15a42;
+  --sombraLogo: black;
+}
+
+.modoOscuro {
+  background-color: #121416;
+  color: #f5f0f6;
+  --textoResaltado: #ef3c23;
+  --barra: #133063;
+  --boton: #ff3d51;
+  --amarillo: #ffb520;
+  --sombraBoton: rgb(0, 0, 0);
+  --texto: whitesmoke;
+}
+
+/*BARRA NAV*/
+nav {
+  z-index: -1;
+}
+
+.menu_logo {
+  font-family: "Genty Demo", sans-serif;
+  color: var(--logo);
+  text-shadow: 5px 3px 0px var(--sombraLogo);
+  font-size: 50px;
+  padding-top: 10px;
+}
+
+.menu {
+  background-color: var(--barra);
+  color: var(--texto);
+  height: 70px;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.menu_links {
+  height: 100%;
+  transition: transform 0.5s;
+  display: flex;
+}
+
+.menu_item {
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+
+.menu_item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --transform: rotate(0);
+}
+
+.menu_link {
+  color: var(--texto);
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center; /*ALINEA VERTICALMENTE*/
+}
+
+.menu_link:hover,
+.menu_link--inside:hover {
+  background-color: var(--barra);
+  text-decoration: underline;
+}
+
+.menu_arrow {
+  transform: var(--transform);
+  transition: transform 0.3s;
+  display: block;
+  margin-left: 3px;
+}
+
+.menu_anidado {
+  clip-path: var(--clip);
+  transition: clip-path 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max-content;
+  transform: translateY(100%);
+  background-color: var(--barra);
+}
+
+.menu_link--inside {
+  padding: 30px 100px 30px 20px;
+}
+
+.menu_boton {
+  height: 100%;
+  display: none;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.menu_img {
+  display: none;
+  width: 36px;
+}
+
+.active {
+  text-decoration-color: var(--textoResaltado);
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+/*CONTENIDO*/
+.contenido {
+  margin: 40px 0;
+  height: max-content;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.contenido section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.contenido article {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flecha {
+  transform: rotate(-90deg);
+}
+
+.contenido a {
+  color: var(--textoResaltado);
+  font-weight: bold;
+  display: flex; /*para que la flecha y el texto esten en la misma linea ¿se puede mejorar?*/
+  
+  text-decoration: underline ;
+}
+
+.contenido a:hover .flecha {
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.contenido_img {
+  clip-path: circle(45.0% at 50% 50%);
+}
+
+.contenedor_imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.trabajos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/*INFORMACION*/
+.informacion section{
+  width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.informacion article {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.informacion article p, .informacion article li{
+  text-align: justify;
+}
+
+.informacion img {
+  margin: auto;
+}
+
+/*CABECERA*/
+.cabecera {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 400px;
+}
+
+.cabecera_texto {
+  font-size: 30px;
+  text-align: center;
+}
+
+.cabecera_texto p {
+  font-size: 20px;
+}
+
+.cabecera_contacto {
+  margin: 20px 0;
+}
+
+.solicitar_turno {
+  padding: 5px 30px;
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 3px;
+  border: 0;
+  background-color: var(--boton);
+  box-shadow: 3px 3px 0 var(--sombraBoton);
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.solicitar_turno:hover {
+  box-shadow: 8px 8px 0 var(--sombraBoton);
+  transition: 0.5s;
+}
+
+.fotos_cabecera {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecera_img {
+  clip-path: circle(45.0% at 50% 50%);
+  width: 300px;
+}
+
+.numero {
+  color: var(--textoResaltado);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*FOOTER*/
+footer {
+  background-color: var(--barra);
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  width: 100%;
+}
+
+.info_contacto {
+  display: flex;
+  gap: 15px;
+  color: var(--textoResaltado);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.icono_contacto {
+  width: 40px;
+}
+
+.contacto a {
+  display: flex;
+  align-items: center;
+  color: var(--textoResaltado);
+}
+
+.info_contacto a:visited{
+  color: var(--textoResaltado)
+}
+
+.fixed {
+  position: absolute;
+  bottom: 0;
+}
+
+/*TEMA*/
+.botonTema {
+  width: 40px;
+  height: 40px;
+  background-image: url(../Assets/moon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modoOscuro .botonTema {
+  background-image: url(../Assets/sun.svg);
+}
+
+/*FORMULARIO*/
+.formulario {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  width: 70%;
+  height: max-content;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+fieldset div {
+  max-width: 400px;
+}
+
+input {
+  height: 35px;
+  border: 1px black solid;
+  margin: 5px 0;
+  font-size: large;
+}
+
+.required {
+  border: 3px var(--textoResaltado) solid;
+}
+
+input::placeholder {
+  text-transform: uppercase;
+}
+
+/*OCULTA LAS FLECHAS DEL INPUT TIPO NUMBER*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form button {
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+.buttons {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons button:hover {
+  box-shadow: 8px 8px 0 var(--sombraBoton);
+  transition: 0.5s;
+}
+
+.precio {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: var(--amarillo);
+  color: black;
+  box-shadow: 3px 3px 0 var(--sombraBoton);
+}
+
+form button {
+  background-color: var(--boton);
+  box-shadow: 3px 3px 0 var(--sombraBoton);
+}
+
+.check {
+  width: 25px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  bottom: -10px;
+}
+
+/*LE DA UN BORDE A LOS CAMPOS REQUERIDOS VACIOS*/
+input:invalid {
+  border: 1px solid var(--textoResaltado);
+}
+
+.decoracion div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.decoracion div label {
+  width: 50%;
+  padding: 10px;
+}
+
+.decoracion span {
+  text-align: center;
+}
+
+#infoTurno {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*TRABAJOS*/
+
+.contenedor_trabajos {
+  width: 80%;
+  margin: 50px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.contenedor_trabajos img {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.contenedor_trabajos .foto_trabajo:hover, .masTrabajos:hover {
+  transform: scale(1.2);
+}
+
+.imgCompleta {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.imgCompleta img {
+  width: 90%;
+  max-width: 600px;
+}
+
+.imgCompleta span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  cursor: pointer;
+  color:whitesmoke
+}
+
+.masTrabajos {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.masTrabajos span {
+  position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*MODAL*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.camposIncorrectos {
+  display: none;
+}
+
+.enviado {
+  display: none;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
+  background-color: var(--barra);
+  color: black;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.modal a {
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--boton);
+  width: max-content;
+  padding: 10px;
+}

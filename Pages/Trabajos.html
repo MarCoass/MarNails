@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <!--Style "terminado"-->
+    <link rel="stylesheet" href="../Styles/styles.css" />
+</head>
+<body id="body">
+    <!--          INICIO NAV BAR               -->
+    <nav class="menu">
+        <section class="menu_container">
+            <a href="HomePage.html"><h1 class="menu_logo">Mar Nails</h1></a>
+            <ul class="menu_links">
+                <li class="menu_item">
+                    <a href="Trabajos.html" class="menu_link active">Trabajos</a>
+                </li>
+                <li class="menu_item menu-item--show">
+                    <a href="#" class="menu_link">Informacion <img src="../Assets/arrow.svg" class="menu_arrow"/></a>
+                    <ul class="menu_anidado">
+                        <li class="menu_item--inside">
+                            <a href="Semipermanente.html" class="menu_link menu_link--inside">Que es el semipermantente</a>
+                        </li>
+                        <li class="menu_item--inside">
+                            <a href="PressOn.html" class="menu_link menu_link--inside">Que son las Press on</a>
+                        </li>
+                        <li class="menu_item--inside">
+                            <a href="Decoraciones.html" class="menu_link menu_link--inside">Decoraciones</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="Contacto.html" class="menu_link">Contacto</a>
+                </li>
+            </ul>
+            <a href="SolicitarTurno.html"><button class="solicitar_turno">Solicitar turno</button></a>
+            <div class="botonTema" id="boton">
+            </div>
+        </section>
+    </nav>
+    <!--        FIN NAV BAR           -->
+<div class="contenido">
+    <div class="imgCompleta" id="contenedorImagenCompleta">
+        <img src="" width="500px" class="foto_trabajo" id="imagenCompleta">
+        <span onclick="closeImg()">X</span>
+    </div>
+<h2>Trabajos</h2>
+<div class="contenedor_trabajos">
+    
+        <img src="../Assets/Images/Trabajos/Trabajo (1).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (2).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (3).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (4).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (5).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (6).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (7).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (8).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (9).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (10).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (11).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (12).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (13).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (14).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (15).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (16).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (17).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (18).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <img src="../Assets/Images/Trabajos/Trabajo (19).jpeg" onclick="openImg(this.src)" class="foto_trabajo" width="200px">
+        <div class="masTrabajos">
+            <a href="https://www.instagram.com/mar.nails.cf/" target="_blank">
+                <img src="../Assets/instagram.svg" alt="">
+            <span>Ver mas </span>
+            </a>
+        </div>
+</div>
+</div>
+    <!--        FOOTER           -->
+    <footer> 
+        <a href="SolicitarTurno.html"><button class="solicitar_turno">Solicitar turno</button></a>
+        <p class="contacto">
+            <h2>Contacto</h2>
+            <p class="info_contacto">
+                <a href="https://www.instagram.com/mar.nails.cf/" target="_blank"><img src="../Assets/instagram.svg" class="icono_contacto">@mar.nails.cf</a>
+                <a href="https://api.whatsapp.com/send?phone=542994677550"><img src="../Assets/whatsapp.svg" class="icono_contacto">2994677550</a>
+            </p>
+        </p>
+    </footer>
+  <!--        FIN FOOTER           -->
+  <script src="../Js/tema.js"></script>
+  <script src="../Js/trabajos.js"></script>
+</body>
+</html>

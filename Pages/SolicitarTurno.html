@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Turno</title>
+    <!--Style "terminado"-->
+    <link rel="stylesheet" href="../Styles/styles.css" />
+</head>
+<body id="body">
+    
+    <nav class="menu">
+        <section class="menu_container">
+            <a href="HomePage.html"><h1 class="menu_logo">Mar Nails</h1></a>
+            <ul class="menu_links">
+                <li class="menu_item">
+                    <a href="Trabajos.html" class="menu_link">Trabajos</a>
+                </li>
+                <li class="menu_item menu-item--show">
+                    <a href="#" class="menu_link">Informacion <img src="../Assets/arrow.svg" class="menu_arrow"/></a>
+                    <ul class="menu_anidado">
+                        <li class="menu_item--inside">
+                            <a href="Semipermanente.html" class="menu_link menu_link--inside">Que es el semipermantente</a>
+                        </li>
+                        <li class="menu_item--inside">
+                            <a href="PressOn.html" class="menu_link menu_link--inside">Que son las Press on</a>
+                        </li>
+                        <li class="menu_item--inside">
+                            <a href="Decoraciones.html" class="menu_link menu_link--inside">Decoraciones</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="Contacto.html" class="menu_link">Contacto</a>
+                </li>
+            </ul>
+
+            <a href="SolicitarTurno.html"><button class="solicitar_turno">Solicitar turno</button></a>
+            <div class="botonTema" id="boton">
+            </div>
+        </section>
+    </nav>
+
+    <div class="contenido formulario">
+        <form action="" id="form">
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <div>
+                    <input placeholder="nombre" type="text" id="nombre" name="nombre" class="required">
+                </div>
+                
+                <div>
+                    <input placeholder="apellido" type="text" id="apellido" name="apellido" class="required">
+                </div>
+
+                <div>
+                    <input placeholder="edad" type="number" name="edad" id="edad" min="16" max="100" class="required">
+                </div>
+
+                <div>
+                    <input placeholder="telefono" type="number" id="nroTelefono" name="nroTelefono" class="required">
+                </div>
+            
+                <div>
+                    <input placeholder="mail" type="mail" name="mail">
+                </div>
+
+                
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Dia y horario</legend>
+            <div class="opciones">
+                Preferencia de horario:
+
+                    <label><input class="check" type="radio" name="horario">Mañana</label>
+                    <label><input class="check" type="radio" name="horario">Tarde</label>
+                    <label><input class="check" type="radio" name="horario">Indistinto</label>           
+            </div>
+            
+            <div>
+                <label for="diaPreferencia">Dia de preferencia</label>
+                <input type="date" name="diaPreferencia" id="diaPreferencia">
+            </div>
+            
+
+        </fieldset>
+
+        <fieldset id="infoTurno">
+            <legend>Sobre el turno</legend>
+            <div id="primerVez">
+                <label for="primeraVez">Primera vez que se realiza semipermantente</label>
+                <input class="check" type="checkbox" name="primeraVez" id="primeraVez" value="si">
+            </div>
+                
+                
+            <div>
+                <label for="retirado">Incluye retirado de semipermanente: </label>
+                <input class="check" type="checkbox" name="retirado" id="retirado" value="si">
+            </div>
+            <div>
+                <label for="cantUniasDecoradas">¿Cuantas uñas desea decorar?</label>
+                <input type="number" name="cantUniasDecoradas" id="cantUniasDecoradas" max="10" min="0">
+            </div>  
+        
+            <div class="opciones decoracion">
+                <span>Tipo de decoracion: </span>
+                <div>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion">Dibujo a mano alzada</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion">Strass</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion" disabled>Papel Foil</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion">Pigmentos</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion">Glitter</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion" disabled>Apliques 3D</label>
+                    <label>
+                        <input class="check" type="checkbox" name="tipoDecoracion" id="tipoDecoracion">Francesitas</label>
+            </div>
+        </div>
+        </fieldset>
+            <div class="precio">Precio aproximado: $<span id="precio"></span></div>
+            <div class="buttons">
+                <button id="enviar" class="submit">Enviar</button>
+                <button type="reset" id="borrar">Borrar todo</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="modal camposIncorrectos" id="modalCamposIncorrectos">
+        <div class="modal-dialog" id="camposIncorrectos">
+            <h4>Por favor complete los campos obligatorios</h4>
+            <a class="cerrarModal" id="botonContinuarError">Continuar</a>
+        </div>
+    </div>
+
+    <div class="modal enviado" id="modalFormularioEnviado">
+        <div class="modal-dialog">
+            <h4>Formulario enviado correctamente</h4>
+            <p>Gracias por Solicitar un turno!</p>
+            <a class="cerrarModal" id="botonContinuarEnviado">Continuar</a>
+        </div>
+    </div>
+
+
+    <footer> 
+        <a href="SolicitarTurno.html"><button class="solicitar_turno">Solicitar turno</button></a>
+        <p class="contacto">
+            <h2>Contacto</h2>
+            <p class="info_contacto">
+                <a href="https://www.instagram.com/mar.nails.cf/" target="_blank"><img src="../Assets/instagram.svg" class="icono_contacto">@mar.nails.cf</a>
+                <a href="https://api.whatsapp.com/send?phone=542994677550"><img src="../Assets/whatsapp.svg" class="icono_contacto">2994677550</a>
+            </p>
+        </p>
+        
+    </footer>
+    <script src="../Js/formulario.js"></script>
+    <script src="../Js/tema.js"></script>
+</body>
+</html>
